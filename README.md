@@ -2,8 +2,6 @@
 
 This project is a **semantic book recommendation system** powered by **sentence-transformer embeddings**, **LangChain**, and an interactive **Gradio** UI. It allows users to receive personalized book recommendations based on natural language queries, category filters, and emotional tones extracted from book descriptions.
 
-> Dataset source: [7k Books with Metadata – Kaggle](https://www.kaggle.com/datasets/dylanjcastillo/7k-books-with-metadata)
-
 ---
 
 ## 🚀 Features
@@ -41,4 +39,83 @@ This project is a **semantic book recommendation system** powered by **sentence-
 ---
 
 ## 📂 Project Structure
+
+```
+semantic-book-recommender/
+├── .env                    # Empty or ignored in this project
+├── chroma_db/              # Vector DB directory created at runtime
+├── books_with_emotions.csv
+├── tagged_description.txt
+├── dashboard_gradio.py
+├── *.ipynb                 # Data processing notebooks
+```
+
+---
+
+## 💻 Running the App
+
+### 1. Install dependencies
+
+Create a virtual environment and install requirements:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+Or manually install:
+
+```bash
+pip install gradio langchain-community langchain-chroma sentence-transformers pandas numpy python-dotenv
+```
+
+### 2. Run the app
+
+```bash
+python dashboard_gradio.py
+```
+
+You’ll see something like:
+
+```
+* Running on local URL: http://127.0.0.1:7860
+```
+
+Visit that link in your browser to use the recommender.
+
+---
+
+## 🧠 How It Works
+
+- **Load and Embed Descriptions**  
+  Book descriptions are loaded from `tagged_description.txt`, split into chunks, and embedded using `sentence-transformers/all-MiniLM-L6-v2`.
+
+- **Vector DB Creation**  
+  Descriptions are embedded and stored using Chroma, a vector database backed by LangChain.
+
+- **Query Matching**  
+  User input is also embedded and used to retrieve the most similar book chunks.
+
+- **Filtering & Sorting**  
+  Retrieved books are filtered by category and optionally sorted based on emotional tone: joy, sadness, anger, fear, or surprise.
+
+- **Display in UI**  
+  Gradio renders the final recommendations with thumbnails, titles, and summaries.
+
+---
+
+## 📌 Dataset
+
+This project uses the Kaggle dataset:
+
+📚 **[7k Books with Metadata](https://www.kaggle.com/datasets/dylanjcastillo/7k-books-with-metadata)**  
+It includes book titles, authors, descriptions, thumbnails, and category labels.
+
+---
+
+## 👤 Author
+
+**Taha Bouhafa**  
+📧 tahabouhafa1@gmail.com  
 
