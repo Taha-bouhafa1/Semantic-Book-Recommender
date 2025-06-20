@@ -4,6 +4,13 @@ This project is a **semantic book recommendation system** powered by **sentence-
 
 ---
 
+## 📸 Dashboard Preview
+
+Here is a preview of the Semantic Book Recommender dashboard:
+
+![Semantic Book Recommender Dashboard](images/dashboard.jpg)
+
+---
 ## 🚀 Features
 
 - 🔍 **Semantic Search** — Uses MiniLM sentence embeddings to retrieve books similar to user prompts.
