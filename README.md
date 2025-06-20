@@ -8,7 +8,7 @@ This project is a **semantic book recommendation system** powered by **sentence-
 
 Here is a preview of the Semantic Book Recommender dashboard:
 
-![Semantic Book Recommender Dashboard](images/dashboard.jpg)
+![Dashboard Screenshot](https://github.com/Taha-bouhafa1/Semantic-Book-Recommender/blob/main/images/dashbord.jpg)
 
 ---
 ## 🚀 Features
