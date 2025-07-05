@@ -3,6 +3,13 @@
 This project is a **semantic book recommendation system** powered by **sentence-transformer embeddings**, **LangChain**, and an interactive **Gradio** UI. It allows users to receive personalized book recommendations based on natural language queries, category filters, and emotional tones extracted from book descriptions.
 
 ---
+## Architecture Overview
+
+Below is the architecture diagram of the Semantic Book Recommender system, illustrating how data flows from the dataset through preprocessing, embedding, vector search, and finally to the user interface.
+
+![Architecture Diagram](images/book_recommender.png)
+
+---
 
 ## 📸 Dashboard Preview
 
